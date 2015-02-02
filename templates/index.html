@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ domain }}</title>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{ domain }}</h1>
+            <form method="post" action="/add">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <div class="input-group">
+                        <input class="form-control" id="name" name="name" placeholder="yourname">
+                        <div class="input-group-addon">.{{ domain }}</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">IPv6</label>
+                    <input class="form-control" id="ipv6" name="ipv6" placeholder="2a03:2267::dead:beef">
+                </div>
+
+                <div class="text-right">
+                    <input class="btn btn-primary" type="submit" value="Hinzufügen">
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Name</h3>
+                    <p>Der Name unter dem deine Seite erreichbar sein soll. Wenn du den Namen foo eingibst, ist sie danach unter foo.mesh.hamburg erreichbar.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>IPv6</h3>
+                    <p>Die IPv6 Adresse von deinem Gerät, dass du öffentlich erreichbar machen möchtest.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Gentle*man Agreement</h3>
+                    <p>Kein Missbrauch pls.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Missbrauch melden</h3>
+                    <p>Wenn du eine Seite findest die dir nicht gefällt, schreibe uns doch einfach eine Email an &lt;<a href="mailto:{{ abuse }}">{{ abuse }}</a>&gt; und wir kümmern uns drum.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
