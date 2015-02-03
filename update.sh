@@ -1,4 +1,4 @@
 #!/bin/sh
 cd /opt/v6helper
 ./build.py
-service nginx reload
+service nginx reload > /dev/null
