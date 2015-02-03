@@ -7,7 +7,7 @@ import re
 app = Flask(__name__)
 
 DOMAIN = 'ff-hh.net'
-ABUSE = 'rm-pls@hamburg.freifunk.net'
+ABUSE = 'abuse@hamburg.freifunk.net'
 DB = 'db/'
 
 kwargs = dict(domain=DOMAIN, abuse=ABUSE)
