@@ -27,5 +27,4 @@ for path in glob('db/*'):
     with open(path) as f:
         x = json.load(f)
     with open(os.path.join(OUT, x['name']), 'w') as f:
-        pass
         f.write(template % (x['name'], x['ipv6']))
